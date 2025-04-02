@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Dipendenti</title>
+    <link rel="stylesheet" href="./Esercizio.css">
+    <script src="./Esercizio.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>Gestione Dipendenti</h1>
+
+        <table id="employeeTable">
+           
+            <thead>
+                <tr>
+                    <th>Nome e Cognome</th>
+                    <th>Data di Nascita</th>
+                    <th>Indirizzo</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                    <th>Posizione</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Giovanni Rossi</td>
+                    <td>15/04/1985</td>
+                    <td>Via Roma, 10 - Milano</td>
+                    <td>333 123 4567</td>
+                    <td>giovanni.rossi@email.com</td>
+                    <td>Contabile Senior</td>
+                    <td>
+                        <button class="editButton" onclick="editRow(this)">Modifica</button>
+                        <button class="deleteButton" onclick="deleteRow(this)">Elimina</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Maria Bianchi</td>
+                    <td>22/09/1990</td>
+                    <td>Via delle Rose, 5 - Roma</td>
+                    <td>349 987 6543</td>
+                    <td>maria.bianchi@email.com</td>
+                    <td>Assistente Manager</td>
+                    <td>
+                        <button class="editButton" onclick="editRow(this)">Modifica</button>
+                        <button class="deleteButton" onclick="deleteRow(this)">Elimina</button>
+                    </td>
+                </tr>
+            </tbody>
+            
+        </table>
+
+        <h2>Aggiungi / Modifica Dipendente</h2>
+        <h3>Inserisci i dettagli del nuovo dipendente</h3>
+
+        <div class="form-image-container">
+
+            <form id="addEmployeeForm">
+                <input type="text" id="name" placeholder="Nome e Cognome" required>
+                <input type="date" id="birthdate" required>
+                <input type="text" id="address" placeholder="Indirizzo" required>
+                <input type="text" id="phone" placeholder="Numero di Telefono" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="position" placeholder="Posizione Lavorativa" required>
+                <button type="submit">Aggiungi Dipendente</button>
+            </form>
+
+            <div class="image-container">
+                <img src="./download.jfif" alt="Azienda">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
